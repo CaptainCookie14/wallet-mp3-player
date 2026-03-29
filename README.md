@@ -39,6 +39,18 @@ The goal of this project is to create a fully functional, pocket-sized music pla
 - able to fit in your wallet
 - cheap as possible to make (under 80$ per unit after considering battery, case, shipping & PCB assembly)
 
+The PCB files in this repository were prepared using the JLCPCB KiCad plugin to streamline manufacturing and assembly.
+
+After completing the schematic and PCB layout in KiCad, the plugin was used to:
+
+Generate production-ready Gerber files
+Export drill files (Excellon format)
+Create a complete BOM (Bill of Materials) with part numbers
+Generate a CPL (Pick and Place file) for SMT assembly
+Automatically align component footprints with JLCPCB’s supported parts library
+
+i also added the project files and schematic files used for kiCad the ZIP file is for production
+
 Status
 
 Currently in development / testing stage. PCB revisions and firmware improvements are ongoing and am trying to get my first prototype tested.
