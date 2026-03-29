@@ -17,11 +17,11 @@ The system is built around a microcontroller that reads audio files from a stora
 Button inputs are continuously read by the microcontroller to control playback state, track switching, and volume adjustment.
 
 Hardware Used
-Microcontroller (e.g., Arduino / ESP32 / similar)
+Microcontroller (STM32F411CEU6x)
 MicroSD card module
-Audio decoder module (or DAC depending on design)
+Audio DAC module 
 Small audio amplifier
-Tactile buttons
+Tactile & low profile buttons
 Lithium battery + charging circuit
 PCB designed in KiCad
 
@@ -49,7 +49,7 @@ Create a complete BOM (Bill of Materials) with part numbers
 Generate a CPL (Pick and Place file) for SMT assembly
 Automatically align component footprints with JLCPCB’s supported parts library
 
-i also added the project files and schematic files used for kiCad the ZIP file is for production
+i also added the project files and schematic files used for kiCad
 
 Status
 
