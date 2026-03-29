@@ -1,8 +1,7 @@
 # wallet-mp3-player
-This project is a compact, portable MP3 player designed to fit roughly the size of a credit card. It focuses on minimal power usage, small PCB design, and simple user controls for playing music from onboard or external storage.
+This project is a small, portable MP3 player, designed to be roughly the size of a credit card. This project is all about minimal power consumption, small PCB design, and ease of use for the player.
 
-HOW TO USE IT 
-Copy MP3 or WAV files onto a microSD card and insert it into the device. Power it on using the built-in battery and use the onboard buttons to control playback. You can play, pause, skip tracks, and adjust volume directly from the device without needing a phone or computer.
+HOW TO USE IT Insert a micro SD card containing MP3 or WAV files into the device. Turn it on using the battery and play the songs using the buttons. It does not require a phone or computer to play songs. Users can play, pause, and skip songs, and also change the volume using the buttons.
 
 <img width="729" height="687" alt="Screenshot 2026-03-28 180335" src="https://github.com/user-attachments/assets/70779c3c-e29a-41a4-81cb-d4196a4f4a52" />
 
