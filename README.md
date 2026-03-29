@@ -56,33 +56,34 @@ Status
 Currently in development / testing stage. PCB revisions and firmware improvements are ongoing and am trying to get my first prototype tested.
 
 BOM MATERIALS LIST:
-Reference	Qty	Value	DNP	Exclude from BOM	Exclude from Board	Footprint	Datasheet	LSCS
-Y1	1	16mhz				Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm		C13738
-U5	1	TPA6132A2RTE				Package_DFN_QFN:WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm_ThermalVias	https://www.ti.com/lit/ds/symlink/tpa6132a2.pdf	C2863070
-U4	1	PCM5102A				Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm	https://www.ti.com/lit/ds/symlink/pcm5102a.pdf	C1520792
-U3	1	USBLC6-2SC6				Package_TO_SOT_SMD:SOT-23-6	https://www.st.com/resource/en/datasheet/usblc6-2.pdf	C7519
-U2	1	AMS1117				Package_TO_SOT_SMD:SOT-223-3_TabPin2	http://www.advanced-monolithic.com/pdf/ds1117.pdf	C6186
-U1	1	STM32F411CEUx				Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm	https://www.st.com/resource/en/datasheet/stm32f411ce.pdf	C60420
-SW2,SW3,SW4,SW5,SW6	5	SW_Push				Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A		C318884
-SW1	1	SW_SPDT				Button_Switch_SMD:SW_SPDT_PCM12		 C109335
-R15,R16	2	5k1				Resistor_SMD:R_0402_1005Metric		C25905
-R13,R14	2	10ohm				Resistor_SMD:R_0402_1005Metric		C25077
-R11,R12	2	450				Resistor_SMD:R_0402_1005Metric		C25117
-R2,R3	2	1.5k ohm				Resistor_SMD:R_0402_1005Metric		C25867
-R1,R4,R5,R6,R7,R9,R10	7	10k				Resistor_SMD:R_0402_1005Metric		C25744
-J5	1	AudioJack3				Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal		C4991872
-J4	1	USB_C_Receptacle_USB2.0_16P				Connector_USB:USB_C_Receptacle_HCTL_HC-TYPE-C-16P-01A	https://www.usb.org/sites/default/files/documents/usb_type-c.zip	C2894897
-J2	1	Micro_SD_Card				sd_card_socket:TF-01A	https://www.we-online.com/components/products/datasheet/693072010801.pdf	C91145
-J1	1	Conn_01x04_Pin				Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical		
-FB1	1	120 ohms @ 100 mhz				Inductor_SMD:L_0603_1608Metric		C76892
-D1,D2	2	LED				LED_SMD:LED_0805_2012Metric		C2290
-C44,C45	2	2.2n				Capacitor_SMD:C_0402_1005Metric		 C1531
-C23,C26,C27,C43	4	2u2				Capacitor_SMD:C_0402_1005Metric		C12530
-C10,C11	2	22u				Capacitor_SMD:C_0805_2012Metric		C45783
-C8,C9	2	10p				Capacitor_SMD:C_0402_1005Metric		C32949
-C6,C7,C24,C25,C30,C31	6	1uf				Capacitor_SMD:C_0402_1005Metric		C52923
-C5	1	10n				Capacitor_SMD:C_0402_1005Metric		C15195
-C4,C15,C17,C19,C32	5	10u				Capacitor_SMD:C_0805_2012Metric		C15850
-C1,C2,C3,C12,C13,C14,C16,C18,C22,C28,C29,C33	12	100n				Capacitor_SMD:C_0402_1005Metric		C1525
-<img width="865" height="813" alt="image" src="https://github.com/user-attachments/assets/a061a979-f948-44e8-b7bb-bfc450ce2f27" />
+| Ref                                   | Qty | Value             | Footprint       | LCSC Link                                                                                                                                                                                                                            |
+| ------------------------------------- | --- | ----------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Y1                                    | 1   | 16 MHz crystal    | 3225            | [https://www.lcsc.com/product-detail/Crystals_YXC-Crystal-CX3225SB16000D0FLJCC_C13738.html](https://www.lcsc.com/product-detail/Crystals_YXC-Crystal-CX3225SB16000D0FLJCC_C13738.html)                                               |
+| U5                                    | 1   | TPA6132A2RTE      | WQFN-16         | [https://www.lcsc.com/product-detail/Audio-ICs_Texas-Instruments-TPA6132A2RTE_C2863070.html](https://www.lcsc.com/product-detail/Audio-ICs_Texas-Instruments-TPA6132A2RTE_C2863070.html)                                             |
+| U4                                    | 1   | PCM5102A          | TSSOP-20        | [https://www.lcsc.com/product-detail/Audio-ICs_Texas-Instruments-PCM5102A_C1520792.html](https://www.lcsc.com/product-detail/Audio-ICs_Texas-Instruments-PCM5102A_C1520792.html)                                                     |
+| U3                                    | 1   | USBLC6-2SC6       | SOT-23-6        | [https://www.lcsc.com/product-detail/TVS-Diodes_STMicroelectronics-USBLC6-2SC6_C7519.html](https://www.lcsc.com/product-detail/TVS-Diodes_STMicroelectronics-USBLC6-2SC6_C7519.html)                                                 |
+| U2                                    | 1   | AMS1117           | SOT-223         | [https://www.lcsc.com/product-detail/Linear-Voltage-Regulators_Advanced-Monolithic-Systems-AMS1117-3-3_C6186.html](https://www.lcsc.com/product-detail/Linear-Voltage-Regulators_Advanced-Monolithic-Systems-AMS1117-3-3_C6186.html) |
+| U1                                    | 1   | STM32F411CEUx     | QFN-48          | [https://www.lcsc.com/product-detail/Microcontrollers-MCU-ST-Microelectronics-STM32F411CEUx_C60420.html](https://www.lcsc.com/product-detail/Microcontrollers-MCU-ST-Microelectronics-STM32F411CEUx_C60420.html)                     |
+| SW2–SW6                               | 5   | Tactile switch    | SMD push button | [https://www.lcsc.com/product-detail/Tactile-Switches_XKB-TS-1187A_C318884.html](https://www.lcsc.com/product-detail/Tactile-Switches_XKB-TS-1187A_C318884.html)                                                                     |
+| SW1                                   | 1   | SPDT switch       | PCM12           | [https://www.lcsc.com/product-detail/Slide-Switches_CW-PCM12_C109335.html](https://www.lcsc.com/product-detail/Slide-Switches_CW-PCM12_C109335.html)                                                                                 |
+| R15,R16                               | 2   | 5.1kΩ             | 0402            | [https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-075K1L_C25905.html](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-075K1L_C25905.html)                               |
+| R13,R14                               | 2   | 10Ω               | 0402            | [https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-0710RL_C25077.html](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-0710RL_C25077.html)                               |
+| R11,R12                               | 2   | 450Ω              | 0402            | [https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-07450RL_C25117.html](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-07450RL_C25117.html)                             |
+| R2,R3                                 | 2   | 1.5kΩ             | 0402            | [https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-071K5L_C25867.html](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-071K5L_C25867.html)                               |
+| R1,R4–R7,R9,R10                       | 7   | 10kΩ              | 0402            | [https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-0710KL_C25744.html](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_YAGEO-RC0402FR-0710KL_C25744.html)                               |
+| J5                                    | 1   | 3.5mm audio jack  | SMT             | [https://www.lcsc.com/product-detail/Audio-Connectors_CUI-Devices-SJ-3523-SMT_C4991872.html](https://www.lcsc.com/product-detail/Audio-Connectors_CUI-Devices-SJ-3523-SMT_C4991872.html)                                             |
+| J4                                    | 1   | USB-C receptacle  | 16P USB2.0      | [https://www.lcsc.com/product-detail/USB-Connectors_XKB-Connectivity-U262-16XN-4BVC11_C2894897.html](https://www.lcsc.com/product-detail/USB-Connectors_XKB-Connectivity-U262-16XN-4BVC11_C2894897.html)                             |
+| J2                                    | 1   | Micro SD socket   | TF-01A          | [https://www.lcsc.com/product-detail/Memory-Card-Sockets_Jinling-Group-TF-01A_C91145.html](https://www.lcsc.com/product-detail/Memory-Card-Sockets_Jinling-Group-TF-01A_C91145.html)                                                 |
+| J1                                    | 1   | 4-pin header      | 2.54mm          | [https://www.lcsc.com/product-detail/Pin-Header-Sockets_Generic-2-54mm-pin-header_CNA.html](https://www.lcsc.com/product-detail/Pin-Header-Sockets_Generic-2-54mm-pin-header_CNA.html)                                               |
+| FB1                                   | 1   | 120Ω ferrite bead | 0603            | [https://www.lcsc.com/product-detail/Ferrite-Beads_Murata-BLM18AG121SN1D_C76892.html](https://www.lcsc.com/product-detail/Ferrite-Beads_Murata-BLM18AG121SN1D_C76892.html)                                                           |
+| D1,D2                                 | 2   | LED               | 0805            | [https://www.lcsc.com/product-detail/LED-Indication_YONGYUTAI-0805-LED_C2290.html](https://www.lcsc.com/product-detail/LED-Indication_YONGYUTAI-0805-LED_C2290.html)                                                                 |
+| C44,C45                               | 2   | 2.2nF             | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R7BB222_C1531.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R7BB222_C1531.html)                                               |
+| C23,C26,C27,C43                       | 4   | 2.2µF             | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402MRX5R5BB225_C12530.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402MRX5R5BB225_C12530.html)                                             |
+| C10,C11                               | 2   | 22µF              | 0805            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_Murata-GRM21BR61A226ME44_C45783.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_Murata-GRM21BR61A226ME44_C45783.html)                                           |
+| C8,C9                                 | 2   | 10pF              | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402JRNPO9BN100_C32949.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402JRNPO9BN100_C32949.html)                                             |
+| C6,C7,C24,C25,C30,C31                 | 6   | 1µF               | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402MRX5R5BB105_C52923.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402MRX5R5BB105_C52923.html)                                             |
+| C5                                    | 1   | 10nF              | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R9BB103_C15195.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R9BB103_C15195.html)                                             |
+| C4,C15,C17,C19,C32                    | 5   | 10µF              | 0805            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_Murata-GRM21BR61A106KE19_C15850.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_Murata-GRM21BR61A106KE19_C15850.html)                                           |
+| C1–C3,C12–C14,C16,C18,C22,C28–C29,C33 | 12  | 100nF             | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R7BB104_C1525.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R7BB104_C1525.html)                                               |
+
 
