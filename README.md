@@ -8,33 +8,30 @@ HOW TO USE IT Insert a micro SD card containing MP3 or WAV files into the device
 
 Features
 
-Plays MP3 audio files
-Ultra-compact PCB design (credit card sized)
-Button-based controls (play/pause, next, previous, volume)
-MicroSD storage support for music files
-Low-power operation for portable use
-Optional headphone or small speaker output
+Plays MP3 audio files Ultra-compact PCB design (credit card sized) Button-based controls (play/pause, next, previous, volume) Supports microSD storage for music files Low power consumption for portable devices Optional output for headphones or small speakers
 
-How It Works
+HOW IT WORKS:
 
-The system is built around a microcontroller that reads audio files from a storage module (typically a microSD card). The audio data is decoded either by an onboard decoder chip or firmware library and then sent to an audio amplifier for output.
+It is composed of a microcontroller, which reads the audio files from a storage module, usually a microSD card. The microcontroller then sends the decoded audio to an amplifier for output.
 
-Button inputs are continuously read by the microcontroller to control playback state, track switching, and volume adjustment.
+The buttons are always being read by the microcontroller, which controls the state of the player, the songs being played, and the volume.
 
-Hardware Used
-Microcontroller (STM32F411CEU6x)
-MicroSD card module
-Audio DAC module 
-Small audio amplifier
-Tactile & low profile buttons
-Lithium battery + charging circuit
-PCB designed in KiCad
+HARDWARE USED:
 
-Wiring / Connections
-MicroSD module connected via SPI
-Audio module connected via I2S or analog pins
-Buttons connected to digital GPIO pins with pull-ups
-Battery connected through power management circuit
+-Microcontroller ( STM32F411CEU6x )
+- Micro SD card module
+- Audio DAC module
+- Small audio amplifier
+- Tactile and low-profile buttons
+- Lithium battery and charging circuit
+- PCB designed in KiCad
+
+WIRING/CONNECTIONS:
+
+- Micro SD card module is connected through SPI
+- Audio module is connected through I2S or analog pins
+- Buttons are connected to digital GPIOs with pull-ups
+- Battery is connected through power management circuit
 
 <img width="368" height="585" alt="Screenshot 2026-03-28 175625" src="https://github.com/user-attachments/assets/4fd8b7ca-de09-456d-a16c-0dc771e36ba9" />
 
