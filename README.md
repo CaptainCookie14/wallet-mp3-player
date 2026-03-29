@@ -4,6 +4,9 @@ This project is a compact, portable MP3 player designed to fit roughly the size 
 HOW TO USE IT 
 Copy MP3 or WAV files onto a microSD card and insert it into the device. Power it on using the built-in battery and use the onboard buttons to control playback. You can play, pause, skip tracks, and adjust volume directly from the device without needing a phone or computer.
 
+<img width="729" height="687" alt="Screenshot 2026-03-28 180335" src="https://github.com/user-attachments/assets/70779c3c-e29a-41a4-81cb-d4196a4f4a52" />
+
+
 Features
 
 Plays MP3 audio files
@@ -34,6 +37,7 @@ Audio module connected via I2S or analog pins
 Buttons connected to digital GPIO pins with pull-ups
 Battery connected through power management circuit
 
+<img width="368" height="585" alt="Screenshot 2026-03-28 175625" src="https://github.com/user-attachments/assets/4fd8b7ca-de09-456d-a16c-0dc771e36ba9" />
 
 The goal of this project is to create a fully functional, pocket-sized music player that is:
 
@@ -90,3 +94,4 @@ BOM MATERIALS LIST:
 | C1–C3,C12–C14,C16,C18,C22,C28–C29,C33 | 12  | 100nF             | 0402            | [https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R7BB104_C1525.html](https://www.lcsc.com/product-detail/Ceramic-Capacitors_YAGEO-CC0402KRX7R7BB104_C1525.html)                                               |
 
 
+<img width="1508" height="537" alt="Screenshot 2026-03-28 184904" src="https://github.com/user-attachments/assets/5a637558-4bcc-41c8-ad8c-d06ffcc73810" />
