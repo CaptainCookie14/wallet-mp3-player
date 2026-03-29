@@ -1,1 +1,80 @@
+#include "main.h"
+#include "fatfs.h"
 
+#include <string.h>
+
+I2S_HandleTypeDef hi2s2;
+SPI_HandleTypeDef hspi1;
+
+FATFS fs;
+FIL file;
+UINT bytesRead;
+
+uint8_t audioBuffer[4096];
+
+#define CS_PORT GPIOB
+#define CS_PIN  GPIO_PIN_6
+
+void CS_Select() {
+    HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_RESET);
+}
+
+void CS_Unselect() {
+    HAL_GPIO_WritePin(CS_PORT, CS_PIN, GPIO_PIN_SET);
+}
+
+// simple button
+uint8_t button(GPIO_TypeDef* port, uint16_t pin)
+{
+    if (HAL_GPIO_ReadPin(port, pin) == GPIO_PIN_RESET) {
+        HAL_Delay(20);
+        if (HAL_GPIO_ReadPin(port, pin) == GPIO_PIN_RESET)
+            return 1;
+    }
+    return 0;
+}
+
+void playWAV(const char *filename)
+{
+    f_open(&file, filename, FA_READ);
+
+    // skip WAV header (44 bytes)
+    f_lseek(&file, 44);
+
+    while (1)
+    {
+        f_read(&file, audioBuffer, sizeof(audioBuffer), &bytesRead);
+
+        if (bytesRead == 0)
+            break;
+
+        HAL_I2S_Transmit(&hi2s2,
+                         (uint16_t*)audioBuffer,
+                         bytesRead / 2,
+                         HAL_MAX_DELAY);
+    }
+
+    f_close(&file);
+}
+
+int main(void)
+{
+    HAL_Init();
+    SystemClock_Config();
+
+    MX_GPIO_Init();
+    MX_SPI1_Init();
+    MX_I2S2_Init();
+    MX_FATFS_Init();
+
+    HAL_Delay(500);
+
+    f_mount(&fs, "", 1);
+
+    while (1)
+    {
+        if (button(GPIOB, GPIO_PIN_0)) {
+            playWAV("song.wav");
+        }
+    }
+}
